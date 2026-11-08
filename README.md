@@ -93,3 +93,8 @@ O Job Finder foi desenvolvido como projeto de prática em desenvolvimento web, c
 ## Licença
 
 Este projeto está sob a licença MIT.
+
+**Lázaro Messias**
+
+- [GitHub](https://github.com/Lazaro277)
+- [LinkedIn](https://www.linkedin.com/in/lazaro-messias/)
