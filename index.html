@@ -1,31 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/styles.css">
-    <title>Job Finder</title>
+
+    <title>Job Finder | Guia de execução</title>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0d6efd, #084298);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 20px auto 0;
+            color: #e5efff;
+        }
+
+        .section {
+            padding: 45px 0;
+        }
+
+        .step-card {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 24px;
+            height: 100%;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #212529;
+            color: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 12px;
+        }
+
+        code {
+            color: #0d6efd;
+        }
+
+        pre code {
+            color: #f8f9fa;
+        }
+
+        .info-box {
+            background-color: #e7f1ff;
+            border-left: 4px solid #0d6efd;
+            padding: 18px;
+            border-radius: 6px;
+        }
+
+        footer {
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 25px 15px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Job Finder</a>
+        <nav class="navbar navbar-expand-lg bg-white border-bottom">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">Job Finder</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link btn">Ver Vagas</a>
+                            <a class="nav-link" href="#sobre">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link btn btn-primary text-light">Abrir vaga</a>
+                            <a class="nav-link" href="#tecnologias">Tecnologias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#instalacao">Como executar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
                         </li>
                     </ul>
                 </div>
@@ -33,58 +119,252 @@
         </nav>
     </header>
 
-    <div class="container-fluid" id="top-container">
-        <h1 class="text-center" id="main-title">Encontre o emprego dos seus sonhos</h1>
-        <p class="text-center" id="main-subtitle">Somos o site com mais vagas de tecnologias no mercado, direcionadas a
-            home office</p>
-        <form action="" id="search-form" class="input-group">
-            <div class="form-group col-md-10">
-                <input type="text" class="form-control" id="job" name="job"
-                    placeholder="Digite a vaga que está buscando">
-            </div>
-            <div class="col-md-2">
-                <button type="submit" class="btn btn-primary">Procurar</button>
-            </div>
-        </form>
-    </div>
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Job Finder</h1>
 
-    <main>
-        <div class="container" id="jobs-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 id="job-list-title">Veja as nossas vagas em destaque!</h2>
-                    <ul class="list-group" id="job-list">
-                        <li class="list-group-item new-job">
-                            <img src="public/img/company.svg" alt="Company">
-                            <p>Empresa</p>
-                            <h2>Título da vaga</h2>
-                            <p>R$ 3000,00</p>
-                            <span class="new-job-label">Nova</span>
-                            <a href="" class="btn btn-primary">Ver vaga</a>
-                        </li>
-                        <li class="list-group-item">
-                            <img src="public/img/company.svg" alt="Company">
-                            <p>Empresa</p>
-                            <h2>Título da vaga</h2>
-                            <p>R$ 3000,00</p>
-                            <a href="" class="btn btn-primary">Ver vaga</a>
-                        </li>
-                        <li class="list-group-item">
-                            <img src="public/img/company.svg" alt="Company">
-                            <p>Empresa</p>
-                            <h2>Título da vaga</h2>
-                            <p>R$ 3000,00</p>
-                            <a href="" class="btn btn-primary">Ver vaga</a>
-                        </li>
-                    </ul>
-                </div>
+            <p class="fs-5">
+                Uma plataforma para divulgação e busca de oportunidades
+                de trabalho na área de tecnologia.
+            </p>
+
+            <div class="mt-4">
+                <a href="https://github.com/Lazaro277/job-finder" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-light btn-lg me-2">
+                    Ver código no GitHub
+                </a>
+
+                <a href="#instalacao" class="btn btn-outline-light btn-lg">
+                    Como executar
+                </a>
             </div>
         </div>
+    </section>
+
+    <main class="container">
+
+        <section id="sobre" class="section">
+            <h2 class="fw-bold mb-3">Sobre o projeto</h2>
+
+            <p>
+                O Job Finder é uma aplicação web desenvolvida para facilitar
+                a divulgação e a busca de oportunidades profissionais na
+                área de tecnologia.
+            </p>
+
+            <p>
+                A plataforma permite consultar vagas cadastradas, pesquisar
+                oportunidades pelo título e publicar novas vagas com
+                informações sobre a empresa, salário, descrição e contato.
+            </p>
+
+            <div class="info-box mt-4">
+                <strong>Importante:</strong>
+                esta página é uma apresentação do projeto e um guia de execução.
+                Para utilizar as funcionalidades da aplicação, é necessário
+                executar o servidor localmente seguindo as instruções abaixo.
+            </div>
+        </section>
+
+        <section id="tecnologias" class="section border-top">
+            <h2 class="fw-bold mb-4">Tecnologias utilizadas</h2>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <h5>Node.js</h5>
+                        <p class="mb-0">Ambiente de execução JavaScript no servidor.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <h5>Express</h5>
+                        <p class="mb-0">Framework utilizado para criar o servidor e as rotas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <h5>Express Handlebars</h5>
+                        <p class="mb-0">Renderização dinâmica das páginas da aplicação.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <h5>Sequelize</h5>
+                        <p class="mb-0">ORM utilizado para comunicação com o banco de dados.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <h5>SQLite</h5>
+                        <p class="mb-0">Banco de dados utilizado para armazenar as vagas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="step-card">
+                        <h5>Bootstrap</h5>
+                        <p class="mb-0">Framework utilizado na construção da interface.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="instalacao" class="section border-top">
+            <h2 class="fw-bold mb-3">Como executar o projeto</h2>
+
+            <p>
+                Siga os passos abaixo para executar a aplicação em sua máquina.
+            </p>
+
+            <div class="row g-4 mt-2">
+
+                <div class="col-md-6">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h5>Instale os pré-requisitos</h5>
+
+                        <p>
+                            Antes de começar, você precisa ter o Node.js e o npm
+                            instalados em sua máquina.
+                        </p>
+
+                        <p class="mb-0">
+                            <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">
+                                Baixar Node.js
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h5>Clone o repositório</h5>
+
+                        <p>
+                            Abra o terminal e execute o comando:
+                        </p>
+
+                        <pre><code>git clone https://github.com/Lazaro277/job-finder.git</code></pre>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h5>Acesse a pasta</h5>
+
+                        <p>
+                            Entre no diretório do projeto:
+                        </p>
+
+                        <pre><code>cd job-finder</code></pre>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card">
+                        <span class="step-number">4</span>
+                        <h5>Instale as dependências</h5>
+
+                        <p>
+                            Instale todas as bibliotecas necessárias:
+                        </p>
+
+                        <pre><code>npm install</code></pre>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card">
+                        <span class="step-number">5</span>
+                        <h5>Inicie o servidor</h5>
+
+                        <p>
+                            Execute o comando para iniciar a aplicação:
+                        </p>
+
+                        <pre><code>npm run dev</code></pre>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="step-card">
+                        <span class="step-number">6</span>
+                        <h5>Acesse a aplicação</h5>
+
+                        <p>
+                            Com o servidor em execução, abra o endereço abaixo
+                            no navegador:
+                        </p>
+
+                        <pre><code>http://localhost:3000</code></pre>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="info-box mt-4">
+                <strong>Banco de dados:</strong>
+                o projeto utiliza SQLite. O banco está localizado na pasta
+                <code>db</code>, no arquivo <code>app.db</code>.
+                Preserve esse arquivo para manter os dados existentes.
+            </div>
+
+            <div class="info-box mt-3">
+                <strong>Encerrar o servidor:</strong>
+                para parar a aplicação, volte ao terminal e pressione
+                <code>Ctrl + C</code>.
+            </div>
+        </section>
+
+        <section id="funcionalidades" class="section border-top">
+            <h2 class="fw-bold mb-4">Funcionalidades</h2>
+
+            <div class="step-card">
+                <ul class="mb-0">
+                    <li class="mb-2">Listagem das vagas cadastradas.</li>
+                    <li class="mb-2">Pesquisa de oportunidades pelo título.</li>
+                    <li class="mb-2">Visualização dos detalhes de cada vaga.</li>
+                    <li class="mb-2">Cadastro de novas oportunidades.</li>
+                    <li class="mb-2">Validação dos campos obrigatórios.</li>
+                    <li class="mb-2">Validação do endereço de e-mail.</li>
+                    <li class="mb-2">Contato com a empresa por e-mail.</li>
+                    <li>Identificação de vagas publicadas nos últimos 7 dias.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section border-top text-center">
+            <h2 class="fw-bold">Confira o código-fonte</h2>
+
+            <p class="text-secondary">
+                Acesse o repositório para consultar o código e acompanhar
+                o desenvolvimento do projeto.
+            </p>
+
+            <a href="https://github.com/Lazaro277/job-finder" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-lg">
+                Acessar repositório no GitHub
+            </a>
+        </section>
+
     </main>
 
+    <footer>
+        <p class="mb-1">Job Finder</p>
+        <small>Projeto desenvolvido para fins de estudo e prática em desenvolvimento web.</small>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
 </body>
 
 </html>
